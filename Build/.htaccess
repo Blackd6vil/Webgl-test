@@ -1,5 +1,34 @@
-<IfModule mod_mime.c>
-  AddEncoding br .unityweb
-  AddEncoding br .wasm
-  AddType application/wasm .wasm
+<IfModule mod_headers.c>
+<IfModule mod_env.c>
+ 
+<FilesMatch "\.data\.(gz|br)$">
+    Header set Content-Type "application/octet-stream"
+</FilesMatch>
+ 
+<FilesMatch "\.js\.(gz|br)$">
+    Header set Content-Type "application/javascript"
+</FilesMatch>
+ 
+<FilesMatch "\.wasm\.(gz|br)$">
+    Header set Content-Type "application/wasm"
+</FilesMatch>
+ 
+ 
+<FilesMatch "\.gz$">
+    Header set Content-Encoding "gzip"
+</FilesMatch>
+ 
+ 
+<FilesMatch "\.br$">
+    Header set Content-Encoding "br"
+    # Disable automatic gzip compression as it conflicts with Brotli.
+    SetEnv no-gzip
+</FilesMatch>
+ 
+ 
+<FilesMatch "\.wasm$">
+    Header set Content-Type "application/wasm"
+</FilesMatch>
+ 
+</IfModule>
 </IfModule>
