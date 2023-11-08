@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-Aperol-V2-0.1.0";
 const contentToCache = [
     "Build/Webgl-test.loader.js",
-    "Build/Webgl-test.framework.js",
-    "Build/Webgl-test.data",
-    "Build/Webgl-test.wasm",
+    "Build/Webgl-test.framework.js.gz",
+    "Build/Webgl-test.data.gz",
+    "Build/Webgl-test.wasm.gz",
     "TemplateData/style.css"
 
 ];
