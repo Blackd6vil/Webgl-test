@@ -1,0 +1,15 @@
+{
+    "name": "Aperol-V2",
+    "short_name": "Aperol-V2",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#775480",
+    "theme_color": "#000",
+    "description": "Aperol Test",
+    "icons": [{
+      "src": "TemplateData/icons/unity-logo-dark.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }]
+  }
